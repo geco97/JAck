@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jack Yacoub</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stykesheet" href="Css/myStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/myStyle.css">
    
 
 </head>
@@ -38,7 +37,7 @@
                                     </div>
                                     <input id="UserName" type="text" class="form-control" required>
                                     <div id="UserName-invalid-feedback" class="invalid-feedback">
-                                        Du måste ange en giltig e-postadress
+                                        Du måste ange en giltig Användarnamn som är minst 5 tecken.
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +47,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-at"></i></span>
                                     </div>
-                                    <input id="email" type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                    <input id="email" type="email" class="form-control"  required>
                                     <div id="email-invalid-feedback" class="invalid-feedback">
                                         Du måste ange en giltig e-postadress
                                     </div>
@@ -112,9 +111,9 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-phone"></i></span>
                                 </div>
-                                <input id="Telefoni" type="tel"  pattern="[0-9]{3} [0-9]{2} [0-9]{2} [0-9]{3}" class="form-control" required>
+                                <input id="Telefoni" type="tel"   class="form-control" required>
                                 <div id="Telefoni-invalid-feedback" class="invalid-feedback">
-                                    Du måste ange en giltig e-postadress
+                                    Du måste ange en giltig Telefonnummer.
                                 </div>
                             </div>
                         </div>
@@ -126,7 +125,7 @@
                                 </div>
                                 <input id="datum" type="date" class="form-control" required>
                                 <div id="datum-invalid-feedback" class="invalid-feedback">
-                                    Du måste ange en giltig e-postadress
+                                    Du måste ange din födelsedag.
                                 </div>
                             </div>
                         </div>
@@ -152,7 +151,7 @@
                             </div>
                             <input id="Adress" type="text" class="form-control" required>
                             <div id="Adress-invalid-feedback" class="invalid-feedback">
-                                Du måste ange en giltig e-postadress
+                                Du måste ange en adress, måste minst vara 7 tecken långt
                             </div>
                         </div>
                     </div>
@@ -161,17 +160,20 @@
                             <label for="Postnummer">Postnummer</label>
                             <input id="Postnummer" type="text" class="form-control"  required>
                             <div id="Postnummer-invalid-feedback" class="invalid-feedback">
-                                Du måste ange en giltig e-postadress
+                                Du måste ange en giltig Postnummer
                             </div>
                         </div>
                         <div class="col-md-8 mb-3">
-                            <label for="lastName">Ort</label>
-                            <select class="custom-select" id="inputGroupSelect01" required>
+                            <label for="City">Ort</label>
+                            <select class="custom-select" id="City" required>
                                 <option selected value="">Välj...</option>
                                 <option value="1">Stockholm</option>
                                 <option value="2">Örebro</option>
                                 <option value="3">Västerås</option>
                             </select>
+                            <div id="City-invalid-feedback" class="invalid-feedback">
+                                Du måste ange en giltig Ort
+                            </div>
                         </div>
                     </div>
 
@@ -181,64 +183,12 @@
                 <div class="card-header">Om dig</div>
                 <div class="card-body">
                     <div class="row">
-                        <div class=" col-lg-12 mb-3">
-                            <label for="email">Färdighet:</label>
-                            <div class="row form-group">
-                                <div class="col col-md-4">
-                                    <div class="form-check">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck2" required>
-                                            <label class="custom-control-label" for="customCheck2">Html</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck3" required>
-                                            <label class="custom-control-label" for="customCheck3">Css</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck4" required>
-                                            <label class="custom-control-label" for="customCheck4">JavaScript</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-md-4">
-                                    <div class="form-check">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck5" required>
-                                            <label class="custom-control-label" for="customCheck5">PHP</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck6" required>
-                                            <label class="custom-control-label" for="customCheck6">.net</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck7" required>
-                                            <label class="custom-control-label" for="customCheck7">Python</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-md-4">
-                                    <div class="form-check">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck8" required>
-                                            <label class="custom-control-label" for="customCheck8">Java</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck9" required>
-                                            <label class="custom-control-label" for="customCheck9">C++</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck10" required>
-                                            <label class="custom-control-label" for="customCheck10">C#</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
                         <div class="col-lg-12 mb-3">
                             <label for="email">Om dig:</label>
-                            <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control" required></textarea>
-
+                            <textarea name="textarea-input" id="textareaInput" rows="5" placeholder="Content..." class="form-control noresize" required></textarea>
+                            <div id="textareaInput-invalid-feedback" class="invalid-feedback">
+                                Du måste ange en text som är mellan 12 och 50 tecken långt
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -254,7 +204,7 @@
 
                         </div>
                         <div class="col-lg-12 mb-3">
-                            <button type="submit" class="btn btn-color2019 btn-lg btn-block">Registrera nytt medlemskap</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Registrera nytt medlemskap</button>
                         </div>
                     </div>
                 </div>
@@ -263,12 +213,10 @@
 
         </div>
     </main>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    
 <script src="Js/Validate.js" ></script>
 </body>
 

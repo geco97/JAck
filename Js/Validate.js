@@ -7,6 +7,10 @@ $(function () {
         validateFormSelectElements($(this));    
     });
 
+    $("form textarea").change(function() {
+        validateFormtextarea($(this));    
+    });
+
     // functions
     function validateFormSelectElements(select) {
         if(!$(select).val() && $(select).prop("required")) {
@@ -16,8 +20,22 @@ $(function () {
         }
     }
 
+    function validateFormtextarea(textarea){
+        if(!$(textarea).val() && $(textarea).prop("required")) {
+            isInvalid(textarea);
+        } else if($(textarea).val().length > 12 && $(textarea).val().length < 50){
+            isValid(textarea);
+       }else {
+            isInvalid(textarea);           
+        }
+    }
+
     function validateFormElements(input) {
         let min = 2;
+        switch($(input).attr("id")){
+            case "UserName":min = 5; break;
+            case "Adress":min = 7; break;
+        }
 
         if($(input).attr("type") === "text" && $(input).prop("required")) {
             if($(input).attr("id") === "Postnummer") {
