@@ -23,7 +23,7 @@
                     göra är att skicka informationen till Backend för att återigen valideras och därefter skickas till
                     databas för lagring.</p>
             </div>
-            <form class="needs-validation" novalidate>
+            <form action="pages/Register.php" method="POST" class="needs-validation" novalidate>
             <div class="row mt-20 mb-20 pl-20 pr-20">
                 <div class="col-lg-12 mt-20 mb-20 pl-20 pr-20">
                     <div class="card bg-light mb-3">
@@ -35,7 +35,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     </div>
-                                    <input id="UserName" type="text" class="form-control" required>
+                                    <input id="UserName" type="text" name="UserName" class="form-control" required>
                                     <div id="UserName-invalid-feedback" class="invalid-feedback">
                                         Du måste ange en giltig Användarnamn som är minst 5 tecken.
                                     </div>
@@ -47,7 +47,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-at"></i></span>
                                     </div>
-                                    <input id="email" type="email" class="form-control"  required>
+                                    <input id="email" type="email" name="email" class="form-control"  required>
                                     <div id="email-invalid-feedback" class="invalid-feedback">
                                         Du måste ange en giltig e-postadress
                                     </div>
@@ -60,7 +60,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                                         </div>
-                                        <input id="password" type="password" class="form-control" required>
+                                        <input id="password" name="password" type="password" class="form-control" required>
                                         <div id="password-invalid-feedback" class="invalid-feedback">
                                             Du måste ange ett lösenord som är minst 8 tecken
                                         </div>
@@ -86,19 +86,19 @@
 
 
             <div class="card bg-light mb-3">
-                <div class="card-header">personal Uppgifter</div>
+                <div class="card-header">Personliga Uppgifter</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="firstName">Förnamn</label>
-                            <input id="firstName" type="text" class="form-control" required>
+                            <input id="firstName" type="text" name="firstName" class="form-control" required>
                             <div id="firstName-invalid-feedback" class="invalid-feedback">
                                 Du måste ange ett förnamn, måste minst vara 2 tecken långt
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="lastName">Efternamn</label>
-                            <input id="lastName" type="text" class="form-control" required>
+                            <input id="lastName" type="text" name="lastName" class="form-control" required>
                             <div id="lastName-invalid-feedback" class="invalid-feedback">
                                 Du måste ange ett efternamn, måste minst vara 2 tecken långt
                             </div>
@@ -111,7 +111,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-phone"></i></span>
                                 </div>
-                                <input id="Telefoni" type="tel"   class="form-control" required>
+                                <input id="Telefoni" type="tel" name="telenummber"  class="form-control" required>
                                 <div id="Telefoni-invalid-feedback" class="invalid-feedback">
                                     Du måste ange en giltig Telefonnummer.
                                 </div>
@@ -123,7 +123,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
                                 </div>
-                                <input id="datum" type="date" class="form-control" required>
+                                <input id="datum" type="date" name="birthday" class="form-control" required>
                                 <div id="datum-invalid-feedback" class="invalid-feedback">
                                     Du måste ange din födelsedag.
                                 </div>
@@ -133,12 +133,12 @@
                             <label for="lastName">Kön</label>
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioInline1" name="customRadioInline" class="custom-control-input RadioLabel" required>
-                                    <label class="custom-control-label" for="customRadioInline1">Man</label>
+                                    <input type="radio" id="customRadioInline1" name="customRadioInline" value="Male" class="custom-control-input RadioLabel" required>
+                                    <label class="custom-control-label" for="customRadioInline1">Male</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioInline2" name="customRadioInline" class="custom-control-input  RadioLabel" required>
-                                    <label class="custom-control-label" for="customRadioInline2">Kvinna</label>
+                                    <input type="radio" id="customRadioInline2" name="customRadioInline" value="Female" class="custom-control-input  RadioLabel" required>
+                                    <label class="custom-control-label" for="customRadioInline2">Female</label>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-map-marker"></i></span>
                             </div>
-                            <input id="Adress" type="text" class="form-control" required>
+                            <input id="Adress" type="text" class="form-control" name="adress" required>
                             <div id="Adress-invalid-feedback" class="invalid-feedback">
                                 Du måste ange en adress, måste minst vara 7 tecken långt
                             </div>
@@ -158,14 +158,14 @@
                     <div class="row">
                         <div class="col-md-4 mb-3">
                             <label for="Postnummer">Postnummer</label>
-                            <input id="Postnummer" type="text" class="form-control"  required>
+                            <input id="Postnummer" type="text" class="form-control" name="postCode"  required>
                             <div id="Postnummer-invalid-feedback" class="invalid-feedback">
                                 Du måste ange en giltig Postnummer
                             </div>
                         </div>
                         <div class="col-md-8 mb-3">
                             <label for="City">Ort</label>
-                            <select class="custom-select" id="City" required>
+                            <select class="custom-select" id="City" name="city" required>
                                 <option selected value="">Välj...</option>
                                 <option value="1">Stockholm</option>
                                 <option value="2">Örebro</option>
@@ -185,7 +185,7 @@
                     <div class="row">
                         <div class="col-lg-12 mb-3">
                             <label for="email">Om dig:</label>
-                            <textarea name="textarea-input" id="textareaInput" rows="5" placeholder="Content..." class="form-control noresize" required></textarea>
+                            <textarea name="textareaInput" id="textareaInput" name="aboutyou" rows="5" placeholder="Content..." class="form-control noresize" required></textarea>
                             <div id="textareaInput-invalid-feedback" class="invalid-feedback">
                                 Du måste ange en text som är mellan 12 och 50 tecken långt
                             </div>
@@ -198,13 +198,13 @@
                     <div class="row">
                         <div class=" col-lg-12 mb-3">
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1" required>
+                                <input type="checkbox" class="custom-control-input" id="customCheck1" value="1" name="accept" required>
                                 <label class="custom-control-label" for="customCheck1"><a href="#">Användarvillkor</a></label>
                             </div>
 
                         </div>
                         <div class="col-lg-12 mb-3">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Registrera nytt medlemskap</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" name="signup">Registrera nytt medlemskap</button>
                         </div>
                     </div>
                 </div>
