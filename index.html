@@ -1,12 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jack Yacoub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stykesheet" href="Css/myStyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+   
+
 </head>
-<body>
-    git pustasdasd
+
+<body class="bg-light">
+    <main>
+        <div class="container">
+            <div class="py-5 text-center">
+                <h2 class="text-color2019">Registreringsformulär</h2>
+                <p class="lead">Det här formuläret validerar nu samtliga fält till en godtycklig nivå. Individuella
+                    felmeddelanden kan nu ges om det är så att inte vissa krav uppfylls. Det som nu skulle återstå att
+                    göra är att skicka informationen till Backend för att återigen valideras och därefter skickas till
+                    databas för lagring.</p>
+            </div>
+            <form class="needs-validation" novalidate>
+            <div class="row mt-20 mb-20 pl-20 pr-20">
+                <div class="col-lg-12 mt-20 mb-20 pl-20 pr-20">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Inloggning Uppgifter</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="UserName">Användernamn</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input id="UserName" type="text" class="form-control" required>
+                                    <div id="UserName-invalid-feedback" class="invalid-feedback">
+                                        Du måste ange en giltig e-postadress
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">E-postadress</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-at"></i></span>
+                                    </div>
+                                    <input id="email" type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                    <div id="email-invalid-feedback" class="invalid-feedback">
+                                        Du måste ange en giltig e-postadress
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="password">Lösenord</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <input id="password" type="password" class="form-control" required>
+                                        <div id="password-invalid-feedback" class="invalid-feedback">
+                                            Du måste ange ett lösenord som är minst 8 tecken
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="confirmPassword">Bekräfta Lösenord</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <input id="confirmPassword" data-comparewith="#password" type="password" class="form-control" required>
+                                        <div id="confirmPassword-invalid-feedback" class="invalid-feedback">
+                                            Du måste bekräfta lösenordet
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card bg-light mb-3">
+                <div class="card-header">personal Uppgifter</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">Förnamn</label>
+                            <input id="firstName" type="text" class="form-control" required>
+                            <div id="firstName-invalid-feedback" class="invalid-feedback">
+                                Du måste ange ett förnamn, måste minst vara 2 tecken långt
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Efternamn</label>
+                            <input id="lastName" type="text" class="form-control" required>
+                            <div id="lastName-invalid-feedback" class="invalid-feedback">
+                                Du måste ange ett efternamn, måste minst vara 2 tecken långt
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="Telefoni">Telefoni</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                </div>
+                                <input id="Telefoni" type="tel"  pattern="[0-9]{3} [0-9]{2} [0-9]{2} [0-9]{3}" class="form-control" required>
+                                <div id="Telefoni-invalid-feedback" class="invalid-feedback">
+                                    Du måste ange en giltig e-postadress
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="datum">Födelsedag</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
+                                </div>
+                                <input id="datum" type="date" class="form-control" required>
+                                <div id="datum-invalid-feedback" class="invalid-feedback">
+                                    Du måste ange en giltig e-postadress
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="lastName">Kön</label>
+                            <div class="input-group">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline1" name="customRadioInline" class="custom-control-input RadioLabel" required>
+                                    <label class="custom-control-label" for="customRadioInline1">Man</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline2" name="customRadioInline" class="custom-control-input  RadioLabel" required>
+                                    <label class="custom-control-label" for="customRadioInline2">Kvinna</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Adress">Adress</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-map-marker"></i></span>
+                            </div>
+                            <input id="Adress" type="text" class="form-control" required>
+                            <div id="Adress-invalid-feedback" class="invalid-feedback">
+                                Du måste ange en giltig e-postadress
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="Postnummer">Postnummer</label>
+                            <input id="Postnummer" type="text" class="form-control"  required>
+                            <div id="Postnummer-invalid-feedback" class="invalid-feedback">
+                                Du måste ange en giltig e-postadress
+                            </div>
+                        </div>
+                        <div class="col-md-8 mb-3">
+                            <label for="lastName">Ort</label>
+                            <select class="custom-select" id="inputGroupSelect01" required>
+                                <option selected value="">Välj...</option>
+                                <option value="1">Stockholm</option>
+                                <option value="2">Örebro</option>
+                                <option value="3">Västerås</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card bg-light mb-3">
+                <div class="card-header">Om dig</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class=" col-lg-12 mb-3">
+                            <label for="email">Färdighet:</label>
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <div class="form-check">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck2" required>
+                                            <label class="custom-control-label" for="customCheck2">Html</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck3" required>
+                                            <label class="custom-control-label" for="customCheck3">Css</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck4" required>
+                                            <label class="custom-control-label" for="customCheck4">JavaScript</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-md-4">
+                                    <div class="form-check">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck5" required>
+                                            <label class="custom-control-label" for="customCheck5">PHP</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck6" required>
+                                            <label class="custom-control-label" for="customCheck6">.net</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck7" required>
+                                            <label class="custom-control-label" for="customCheck7">Python</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-md-4">
+                                    <div class="form-check">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck8" required>
+                                            <label class="custom-control-label" for="customCheck8">Java</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck9" required>
+                                            <label class="custom-control-label" for="customCheck9">C++</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="SkillsCheckBox" id="customCheck10" required>
+                                            <label class="custom-control-label" for="customCheck10">C#</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <label for="email">Om dig:</label>
+                            <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control" required></textarea>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class=" col-lg-12 mb-3">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1" required>
+                                <label class="custom-control-label" for="customCheck1"><a href="#">Användarvillkor</a></label>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <button type="submit" class="btn btn-color2019 btn-lg btn-block">Registrera nytt medlemskap</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+
+        </div>
+    </main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="Js/Validate.js" ></script>
 </body>
+
 </html>
